@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+    <head>
+        <title>googleSpreadSheetApiVer3Viewer</title>
+        <meta name="description" content="googleSpreadSheetのApiVer3を見るためのツールです。" />
+        <meta charset="UTF-8">
+        <!-- Global site tag (gtag.js) - Google Analytics
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156999886-1"></script> 
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-156999886-1');
+        </script>-->
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <script src="assets/script.js" defer></script>
+    </head>
+    
+    <body>
+      <h3>スプレッドシートのURLを入力して読込→シートを選択で表示</h3>
+      <form name="form1">
+        <input type="text" id="spreadsheetsURL"
+          value="https://docs.google.com/spreadsheets/d/1Q-QfuJ78cLz_S3ueNf77diFP45LzCneGl0XUcuzuW5M/edit" oninput="changeSelectLists(this.value)">
+        <select id="sel1" name="sel1" onchange="createTable(this.value);"></select>
+      </form>
+      <table id="table" class="table">ここにスプレッドシートの中身を表示</table>
+    </body>
+</html>
